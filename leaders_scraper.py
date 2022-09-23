@@ -66,9 +66,9 @@ def get_leaders():
         for country_leader in leaders_per_country[country]:
             country_leader['first_paragraph'] = get_first_paragraph(country_leader['wikipedia_url'], s)
     return leaders_per_country
-
 get_leaders()
 
+leaders_per_country = get_leaders()
 
 def save():
     filename = "leaders.json"
